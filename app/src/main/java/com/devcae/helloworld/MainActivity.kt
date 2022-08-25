@@ -7,8 +7,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Lesson 1
         variablesAndConst()
+        //Lesson 2
         dataTypes()
+        //Lesson 3
+        ifStatement()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -60,4 +64,31 @@ class MainActivity : AppCompatActivity() {
         println(myBool == myBool2)
         println(myBool && myBool2)
     }
+
+    /*IF ELSE STATEMENT
+    Conditional operator  ( > , < , >=, <=, ==, != )
+    Logical operator (&& (y), || (o), ! (no))
+    💡TIP: Ranges and progressions: myNumber2 in 6..10 is equivalent to myNumber2 <= 10 && myNumber2 > 5
+    */
+    private fun ifStatement(){
+        val myNumber = 50
+        val myNumber2 = 72
+
+        //Conditional operator
+        if (myNumber < 10){
+            println("My number $myNumber is less than 10")
+        } else {
+            println("$myNumber is greater than 10")
+        }
+
+        //Logical operator
+        if ((myNumber2 <= 10) || /*&&*/ myNumber2 > 53){
+            println("$myNumber2 is less than or equal to 10, and greater than 5 or is equal to 53")
+        } else if (myNumber2 == 60){
+            println("$myNumber2 is 60")
+        } else {
+            println("$myNumber2 is greater than 10, and isn't equal to 53")
+        }
+    }
+
 }
