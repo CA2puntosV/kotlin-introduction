@@ -8,11 +8,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //Lesson 1
-        variablesAndConst()
+        //variablesAndConst()
         //Lesson 2
-        dataTypes()
+        //dataTypes()
         //Lesson 3
-        ifStatement()
+        //ifStatement()
+        //Lesson 4
+        whenSentence()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -88,6 +90,45 @@ class MainActivity : AppCompatActivity() {
             println("$myNumber2 is 60")
         } else {
             println("$myNumber2 is greater than 10, and isn't equal to 53")
+        }
+    }
+
+    /*WHEN SENTENCE
+    (SWITCH IN OTHER LANGUAGES)
+    The func call is: "value" -> {}
+    The default value is: else -> {}
+    */
+    private fun whenSentence(){
+        val country = "Mexico"
+        val age = 12
+
+        //Strings
+        when(country){
+            "Spain", "Mexico", "Colombia", "Argentina" -> {
+                println("The mother tongue is Spanish")
+            }
+            "United States" -> {
+                println("The mother tongue is English")
+            } else -> {
+                println("Unrecognized language")
+            }
+        }
+
+        //Integer
+        when(age){
+            0, 1, 2, 3 -> {
+                println("You're a baby")
+            } in 3..13 -> {
+                println("You're a kid")
+            } in 14..18 -> {
+                println("You're adolescent")
+            } in 19..69 -> {
+                println("You're adult")
+            } in 70..99 -> {
+                println("You're elder")
+            } else -> {
+                println("😲")
+            }
         }
     }
 
