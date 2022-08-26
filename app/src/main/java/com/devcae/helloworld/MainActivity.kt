@@ -8,13 +8,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //Lesson 1
-        variablesAndConst()
+        //variablesAndConst()
         //Lesson 2
-        dataTypes()
+       // dataTypes()
         //Lesson 3
-        ifStatement()
+        //ifStatement()
         //Lesson 4
-        whenSentence()
+       // whenSentence()
+        //Lesson 5
+        arrays()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -132,4 +134,44 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*ARRAY
+
+     */
+    private fun arrays(){
+        val name = "Cristian"
+        val surName = "Acevedo"
+        val company = "Ibacrea"
+        val age = "20"
+
+        val myArray = arrayListOf<String>() //Here created List of strings
+
+        //Add data one by one
+        myArray.add(name)
+        myArray.add(surName)
+        myArray.add(company)
+        myArray.add(age)
+        println("MyArray: $myArray")
+
+        //Add set of data
+        myArray.addAll(listOf("Damn", "XD"))
+        println("Position 0: ${myArray[0]}")
+
+        //Modify data
+        myArray[3] = "Modified"
+        println("Modify: $myArray")
+
+        //Delete
+        myArray.removeAt(3)
+        println("Deleted Pos 3: $myArray")
+
+        //Scroll through data
+        myArray.forEach {
+            println("it $it") //It is the value in each iteration
+        }
+
+        //Other
+        myArray.count() //Array amount
+        myArray.clear() //Remove all elements
+        myArray.first() //First element
+    }
 }
