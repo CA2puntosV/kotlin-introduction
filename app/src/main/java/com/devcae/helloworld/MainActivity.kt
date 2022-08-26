@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
         ifStatement()
         //Lesson 4
         whenSentence()
-        //Lesson 5
         arrays()
     }
 
@@ -134,9 +133,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /*ARRAY
 
-     */
+    /*ARRAY
+    */
     private fun arrays(){
         val name = "Cristian"
         val surName = "Acevedo"
