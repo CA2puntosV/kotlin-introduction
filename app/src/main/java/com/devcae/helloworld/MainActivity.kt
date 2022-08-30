@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         arrays()
         //Lesson 6
         maps()
+        //Lesson 7
+        loops()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -209,5 +211,60 @@ class MainActivity : AppCompatActivity() {
         //Remove data
         myMap.remove("XD")
         print("REMOVE $myMap")
+    }
+
+    /*LOOPS
+    Sirven para recorrer estructuras que almacenan conjuntos
+    de datos (MAPS / ARRAYS)
+    */
+    private fun loops(){
+
+        val myArray:List<String> = listOf("Hello World", "My Kotlin App", "xD")
+        val myMap:Map<String, Int> = mapOf( "Cristian" to 1 , "Pedro" to 2, "Macaco" to 3)
+
+        //Array con rango numerico
+        val myNumericArray = (0..20)
+
+        // FOR LOOP
+        for (item:String in myArray){
+            println("MY ARRAY: $item")
+        }
+
+        for (item in myMap){
+            println("KEY: ${item.key} VALUE ${item.value}")
+        }
+
+        //Ranges and progressions
+        //Al hacer el recorrido incluye los valores 0 y 10
+        println("..")
+        for(x in 0..10){
+            println(x)
+        }
+
+        //Al hacer el recorrido excluye los valores 0 y 10
+        println("UNTIL")
+        for(x in 0 until 10){
+            println(x)
+        }
+
+        //Saltos en los incrementos, en este caso mostrando números pares
+        println("STEP")
+        for(x in 0..10 step 2){
+            println(x)
+        }
+
+        //Cuenta regrevisa (10 a 0)
+        println("DOWN TO")
+        for(x in 10 downTo 0 step 3){
+            println(x)
+        }
+
+        //WHILE
+        var x = 0
+
+        while (x < 10){
+            println(x)
+            x += 2
+        }
     }
 }
