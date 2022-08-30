@@ -8,17 +8,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //Lesson 1
-        //variablesAndConst()
+        variablesAndConst()
         //Lesson 2
-        //dataTypes()
+        dataTypes()
         //Lesson 3
-        //ifStatement()
+        ifStatement()
         //Lesson 4
-        //whenSentence()
+        whenSentence()
         //Lesson 5
-        //arrays()
+        arrays()
         //Lesson 6
-        //maps()
+        maps()
         //Lesson 7
         loops()
     }
