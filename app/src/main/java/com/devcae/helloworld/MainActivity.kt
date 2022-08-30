@@ -15,7 +15,10 @@ class MainActivity : AppCompatActivity() {
         ifStatement()
         //Lesson 4
         whenSentence()
+        //Lesson 5
         arrays()
+        //Lesson 6
+        maps()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -133,8 +136,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     /*ARRAY
+    Estructuras que sirven para agrupar diferentes tipos de datos
+    en una única estructura. Es una estructura ordenada, dependiendo de los
+    datos que se vayan agregando, así mismo los va mostrando
     */
     private fun arrays(){
         val name = "Cristian"
@@ -171,6 +176,38 @@ class MainActivity : AppCompatActivity() {
         //Other
         myArray.count() //Array amount
         myArray.clear() //Remove all elements
-        myArray.first() //First element
+        //myArray.first() //First element
+    }
+
+    /*MAP OR DICTIONARY
+    Estructura desordenada, se agrupan por clave - valor (key : value)
+    las claves deben ser del mismo tipo y los valores deben ser del mismo tipo,
+    y las claves no pueden repetirse
+    */
+    private fun maps(){
+
+        var myMap: Map<String, Int> = mapOf()
+        println("MY MAP: $myMap")
+
+        //Add data
+        myMap = mutableMapOf("Cristian" to 1, "Brais" to 2) //Destroy previous data and add new values
+        println("ADD DATA: $myMap")
+
+        //Add only one value
+        myMap["CAE"] = 7
+        myMap.put("CAEE" , 10)
+        println("ADD ONE VALUE: $myMap")
+
+        //Data update
+        myMap.put("Cristian", 6)
+        myMap["XD"] = 7
+        println("UPDATE: $myMap")
+
+        //Data access
+        println("ACCESS: ${myMap["Cristian"]}")
+
+        //Remove data
+        myMap.remove("XD")
+        print("REMOVE $myMap")
     }
 }
