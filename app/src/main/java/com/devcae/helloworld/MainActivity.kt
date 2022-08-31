@@ -8,19 +8,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //Lesson 1
-        variablesAndConst()
+        //variablesAndConst()
         //Lesson 2
-        dataTypes()
+        //dataTypes()
         //Lesson 3
-        ifStatement()
+        //ifStatement()
         //Lesson 4
-        whenSentence()
+        //whenSentence()
         //Lesson 5
-        arrays()
+        //arrays()
         //Lesson 6
-        maps()
+        //maps()
         //Lesson 7
-        loops()
+        //loops()
+        //Lesson 8
+        nullSafety()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -265,6 +267,40 @@ class MainActivity : AppCompatActivity() {
         while (x < 10){
             println(x)
             x += 2
+        }
+    }
+
+    /*NULL SAFETY (NULL POINTER EXCEPTION)
+    Seguridad contra nulos, para evitar que durante la
+    ejecución del programa lleguen valores vacíos y así
+    evitar errores
+    */
+    private fun nullSafety(){
+
+        var myString = "Cristian"
+        //ERROR -> myString = null
+        println(myString)
+
+        //Nullable variable
+        var safetyString:String? = "XD"
+        safetyString = null
+        println(safetyString)
+
+        //println("No null ${safetyString!!}") ➡ NullPointerException
+
+        /* ⬆ COMPROBACIONES (IF / ELSE) NO RECOMENDADAS, YA QUE PUEDE SER COSTOSO EL ESTAR
+        COMPROBANDO PARA TODAR LAS VARIABLES.
+        POR LO TANTO, TENER EN CUENTA ⬇*/
+
+        //SAFE CALL
+        println(safetyString?.length)
+
+        safetyString?.let {
+        //SE EJECUTARÁ CUANDO LA VARIABLE NO SEA NULL
+            println("VALUE: $it")
+        } ?: run {
+            //SE EJECUTARÁ CUANDO LA VARIABLE SEA NULL
+            println(safetyString)
         }
     }
 }
