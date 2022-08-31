@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
         nullSafety()
         //Lesson 9
         functions()
+        //Lesson 10
+        classes()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -340,5 +342,25 @@ class MainActivity : AppCompatActivity() {
     fun sunTwoNumbers(firstNum:Int, secondNum:Int) :Int {
         val value = firstNum + secondNum
         return value
+    }
+
+    /*CLASSES / OBJECT
+    Es una construcción flexible, de uso general, para
+    definir nuevos tipos. Pueden contener en su interior
+    propiedades y métodos
+    */
+    private fun classes(){
+
+        val cristian = Programmer("Cristian", 20, arrayOf(Programmer.Language.FLUTTER))
+        println(cristian.name)
+        cristian.code()
+
+        val sara = Programmer(
+            "Sara", 30, arrayOf(Programmer.Language.JAVA, Programmer.Language.JAVASCRIPT,), arrayOf(cristian)
+        )
+        println("-------")
+        println(sara.name)
+        sara.code()
+        println("${sara.friends?.first()?.name} es amigo de ${sara.name}")
     }
 }
