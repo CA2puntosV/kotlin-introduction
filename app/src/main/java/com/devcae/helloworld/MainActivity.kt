@@ -333,6 +333,7 @@ class MainActivity : AppCompatActivity() {
     /*1️⃣*/private fun sayMyName(name:String){
         println("Hola, mi nombre es $name")
     }
+
     /*2️⃣*/private fun sayMyNameAndAge(name:String, age:Int){
         println("Hola, mi nombre es $name y mi edad es $age")
     }
