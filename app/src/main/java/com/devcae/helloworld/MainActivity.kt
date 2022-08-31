@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         loops()
         //Lesson 8
         nullSafety()
+        //Lesson 9
+        functions()
     }
 
     /*VARIABLES AND CONSTANTS
@@ -302,5 +304,41 @@ class MainActivity : AppCompatActivity() {
             //SE EJECUTARÁ CUANDO LA VARIABLE SEA NULL
             println(safetyString)
         }
+    }
+
+    /*FUNCTIONS
+    TROZO DE CODIGO PARA DESEMPEÑAR ALGUNA TAREA
+    AL SER UN CÓDIGO INDEPENDIENTE, NO AYUDARÁ A LA
+    REUTILIZACIÓN DE CÓDIGO
+    */
+    private fun functions(){
+        sayHello()
+        sayHello()
+        sayMyName("Cristian")
+        sayMyNameAndAge("Brais", 32)
+        val sum = sunTwoNumbers(4, 9)
+        println(sum)
+        //println(sunTwoNumbers(4, 9))
+        //println(sunTwoNumbers(10, sunTwoNumbers(5, 5))) concatenar funciones
+
+    }
+
+    private fun sayHello(){
+        println("Hola!")
+    }
+
+    //Funciones con parámetros de entrada
+    /*1️⃣*/private fun sayMyName(name:String){
+        println("Hola, mi nombre es $name")
+    }
+
+    /*2️⃣*/private fun sayMyNameAndAge(name:String, age:Int){
+        println("Hola, mi nombre es $name y mi edad es $age")
+    }
+
+    //Funciones con valor de retorno
+    fun sunTwoNumbers(firstNum:Int, secondNum:Int) :Int {
+        val value = firstNum + secondNum
+        return value
     }
 }
